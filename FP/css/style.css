@@ -1,0 +1,486 @@
+/*--------------------------------Start of Website---------------------------------- */
+body{
+margin: 0px;
+padding: 0px;
+box-sizing: border-box;
+background: hsl(247, 18%, 20%);
+/* borrowed inspirations from codepen https://codepen.io/primalivet/pen/ryjKmV */
+font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+/* This will be my whole nav bar section with a sticky bar element */
+.navBar{
+    background-color: #E3A29A;
+    height: 120px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    border-bottom:5px solid #2C2A3C;
+}
+/* This will be my attention grabber/logo will go */
+.left-corner{
+  float: left;
+}
+.heroLogo{
+    float: left;
+    height: 100px;
+    width: 100px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.navBar h1{
+    color: #2C2A3C;
+    font-size: 70px;
+    float: left;
+    margin-top: 20px;
+    font-family: 'Linden Hill', serif;
+
+}
+/* This is where the navigation tabs are */
+.navBar nav{
+    background-color: #E3A29A;
+    float:right;
+    margin-top: 20px;
+    margin-right: 20px;   
+}
+.navBar ul{
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    height: 70px;
+    overflow: hidden;
+}
+.navBar li{
+    display: block;
+    float: right;
+    border-left: 2px solid #2C2A3C;
+}
+.navBar li:last-child{
+    border-left: none;
+}
+.navBar li a{
+    display: block;
+    color: #2C2A3C;
+    font-size: 35px;
+    padding:  14px 16px;
+    font-family: 'Linden Hill', serif;
+    text-decoration: none;
+    text-transform:uppercase;
+}
+.navBar li a:hover{
+  background-color: #2C2A3C;
+  color: white;
+}
+/* The hero section with the famous quote */
+.heroSection{
+  background-color: #E3A29A;
+  background-image: url("/img/Hero_Image.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position-x: center;
+  background-position-y: top;
+  border-bottom:5px solid #2C2A3C;
+  margin: 0px;
+  padding: 0px;
+  height: 900px;
+}
+blockquote {
+    font-size: 35px;
+    color: #2C2A3C;  
+    font-family: 'Linden Hill', serif;
+    text-align:center;
+    margin-top: -6%;
+    padding-top: 25.5%;
+}
+/* Everything now was a large inspiration from https://codepen.io/primalivet/pen/ryjKmV */
+@supports (display: grid) {
+
+    .grid {
+      display: grid;
+      grid-gap: 1.5vw;
+      min-height: 100vh;
+      padding: 1.5vw;
+    }
+  
+    .grid {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: 50vh 30vh repeat(7, minmax(20vh, 1fr));
+      grid-template-areas:
+        "hero   hero"
+        "big1   big1"
+        "med1   med1"
+        "med2   med2"
+        "small1 small2"
+        "small3 small4"
+        "small5 small6"
+        "small7 small8"
+        "small9 small10";
+    }
+  
+    @media screen and (min-width: 750px) {
+      .grid {
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(5, 25vh);
+        grid-template-areas:
+          "hero   hero   hero   med1   med1"
+          "hero   hero   hero   med2   med2"
+          "big1   big1   big1   big1   big1"
+          "small1 small2 small3 small4 small5"
+          "small6 small7 small8 small9 small10";
+      }
+    }
+  
+    @media screen and (min-width: 1400px) {
+      .grid {
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: auto;
+        grid-template-areas:
+        "small1 hero   hero hero med1   med1"
+        "small2 hero   hero hero med2   med2"
+        /* "small3 small5 big1 big1 small7 small8"
+        "small4 small6 big1 big1 small9 small10"; */
+      }
+    }
+  
+    .grid .item:nth-child(1)  { grid-area: hero; }
+    .grid .item:nth-child(2)  { grid-area: small2; }
+    .grid .item:nth-child(3)  { grid-area: med1; }
+    .grid .item:nth-child(4)  { grid-area: med2; }
+    .grid .item:nth-child(5)  { grid-area: small1; }
+  }
+  
+  /* flexbox fallback is the browser does not support display:grid */
+  @supports not (display: grid) {
+  
+    .grid {
+      display: flex;
+      flex-flow: row wrap;
+      min-height: 100vh;
+      padding: 0.75vw;
+    }
+  
+    .grid .item {
+      min-height: 20vh;
+      margin: 0.75vw;
+    }
+  
+    .grid .item:nth-child(1)  { flex: 0 1 calc(100% - 1.5vw); height: 50vh; }
+    .grid .item:nth-child(2)  { flex: 0 1 calc(100% - 1.5vw); height: 30vh; }
+    .grid .item:nth-child(3)  { flex: 0 1 calc(100% - 1.5vw); }
+    .grid .item:nth-child(4)  { flex: 0 1 calc(100% - 1.5vw); }
+    .grid .item:nth-child(5)  { flex: 0 1 calc(50% - 1.5vw); }
+    .grid .item:nth-child(6)  { flex: 0 1 calc(50% - 1.5vw); }
+    .grid .item:nth-child(7)  { flex: 0 1 calc(50% - 1.5vw); }
+    .grid .item:nth-child(8)  { flex: 0 1 calc(50% - 1.5vw); }
+    .grid .item:nth-child(9)  { flex: 0 1 calc(50% - 1.5vw); }
+    .grid .item:nth-child(10) { flex: 0 1 calc(50% - 1.5vw); }
+    .grid .item:nth-child(11) { flex: 0 1 calc(50% - 1.5vw); }
+    .grid .item:nth-child(12) { flex: 0 1 calc(50% - 1.5vw); }
+    .grid .item:nth-child(13) { flex: 0 1 calc(50% - 1.5vw); }
+    .grid .item:nth-child(14) { flex: 0 1 calc(50% - 1.5vw); }
+  
+    @media screen and (min-width: 750px) {
+      .grid .item:nth-child(1)  { flex: 0 1 calc(60% - 1.5vw); }
+      .grid .item:nth-child(2)  { flex: 0 1 calc(40% - 1.5vw); height: 50vh; }
+    }
+  
+    @media screen and (min-width: 1400px) {
+      .grid .item:nth-child(1)  { flex: 0 1 calc(60% - 1.5vw); }
+      .grid .item:nth-child(2)  { flex: 0 1 calc(40% - 1.5vw); }
+      .grid .item:nth-child(3)  { flex: 0 1 calc(50% - 1.5vw); }
+      .grid .item:nth-child(4)  { flex: 0 1 calc(50% - 1.5vw); }
+      .grid .item:nth-child(5)  { flex: 0 1 calc(25% - 1.5vw); }
+      .grid .item:nth-child(6)  { flex: 0 1 calc(25% - 1.5vw); }
+      .grid .item:nth-child(7)  { flex: 0 1 calc(25% - 1.5vw); }
+      .grid .item:nth-child(8)  { flex: 0 1 calc(25% - 1.5vw); }
+      .grid .item:nth-child(9)  { flex: 0 1 calc(25% - 1.5vw); }
+      .grid .item:nth-child(10) { flex: 0 1 calc(25% - 1.5vw); }
+      .grid .item:nth-child(11) { flex: 0 1 calc(25% - 1.5vw); }
+      .grid .item:nth-child(12) { flex: 0 1 calc(25% - 1.5vw); }
+      .grid .item:nth-child(13) { flex: 0 1 calc(25% - 1.5vw); }
+      .grid .item:nth-child(14) { flex: 0 1 calc(25% - 1.5vw); }
+    }
+  
+  }
+  /* Styles, just for fun */
+  *:before,*:after {
+    box-sizing: border-box;
+  }
+  @supports not (display: grid) {
+    body:before {
+      content: 'Sorry, seems like your browser doesn\'t support display: grid. Below is the flexbox fallback.';
+      display: block;
+      padding: 2rem 2rem 0;
+      color: #ffffff;
+      text-align: center;
+    }
+  }
+  .box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  } 
+  .diamond {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    border: 0px solid #2C2A3C;
+    box-shadow: 1px 1px 0px rgba(0,0,0,0.2);
+    text-align: center;
+    transform-origin: center;
+    transform: rotateZ(45deg);
+    transition: box-shadow 250ms, transform 250ms;
+    font-family: 'Linden Hill', serif;
+    background-color:#E3A29A ;
+    color: #2C2A3C;
+  }
+  .diamond span {
+    font-weight: bold;
+    transform: rotateZ(-45deg)
+  }
+  .grid .item:hover .diamond,
+  .grid .item:focus .diamond {
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+    transform:  rotateZ(45deg) scale(1.2);
+  }
+  .tooltip {
+    position: absolute;
+    z-index: 1;
+    padding: 0.25rem 1rem;
+    border-radius: 5px;
+    background: #29343d;
+    opacity: 0;
+    color: #cedfe9;
+    font-size: 0.875rem;
+    transition: opacity 500ms, transform 500ms;
+  }
+  .tooltip:before {
+    content: '';
+    position: absolute;
+    top: -9px;
+    left: calc(50% - 10px);
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #29343d;
+  }
+  .grid .item:hover .tooltip,
+  .grid .item:focus .tooltip {
+    opacity: 1;
+    transform: translateY(70px);
+  }
+  .grid .item {
+    position: relative;
+    padding: 1vw;
+    background-position:  left bottom;
+    background-size: 150% 100%;
+    transition:500ms, outline 500ms;
+    background-position: top left;
+    outline: transparent;
+  }
+  .grid .item:focus {
+    outline: 2px solid #3eabfa;
+  }
+  /* https://alchetron.com/cdn/donna-tartt-780f4d68-32f0-443e-b097-b71a8c35119-resize-750.jpeg */
+  .grid .item:nth-child(1){             
+    background-image: url("https://i.pinimg.com/originals/76/40/5e/76405e698716d23c3d2e89b7d70d593e.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-position: center; */
+  }
+  .grid .item:nth-child(2)  {
+    background-image: url("https://media.istockphoto.com/illustrations/jane-austen-illustration-id465114681?k=20&m=465114681&s=612x612&w=0&h=nB1HfhvJ0W1_BJIdHBY6LZxLNIb65L9TxMqaSMsr24o=");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+   }
+  .grid .item:nth-child(3)  {
+    background-image: url("https://images.hindustantimes.com/rf/image_size_630x354/HT/p2/2020/06/03/Pictures/_68046266-a58e-11ea-86c3-c49c142691bb.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+   }
+  .grid .item:nth-child(4)  { 
+    background-image: url("https://www.peabodylibrary.org/freeforall/wp-content/uploads/2016/01/woolf1-e1402796124116-650x413.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+   }
+  .grid .item:nth-child(5) { 
+    background-image: url("https://wallsdesk.com/wp-content/uploads/2016/12/j.k.-rowling-Wallpapers-HD.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+   }
+
+
+   .site-footer
+   {
+     background-color:#26272b;
+     padding:45px 0 20px;
+     font-size:15px;
+     line-height:24px;
+     color:#737373;
+   }
+   .site-footer hr
+   {
+     border-top-color:#bbb;
+     opacity:0.5
+   }
+   .site-footer hr.small
+   {
+     margin:20px 0
+   }
+   .site-footer h6
+   {
+     color:#fff;
+     font-size:16px;
+     text-transform:uppercase;
+     margin-top:5px;
+     letter-spacing:2px
+   }
+   .site-footer a
+   {
+     color:#737373;
+   }
+   .site-footer a:hover
+   {
+     color:#3366cc;
+     text-decoration:none;
+   }
+   .footer-links
+   {
+     padding-left:0;
+     list-style:none
+   }
+   .footer-links li
+   {
+     display:block
+   }
+   .footer-links a
+   {
+     color:#737373
+   }
+   .footer-links a:active,.footer-links a:focus,.footer-links a:hover
+   {
+     color:#3366cc;
+     text-decoration:none;
+   }
+   .footer-links.inline li
+   {
+     display:inline-block
+   }
+   .site-footer .social-icons
+   {
+     text-align:right
+   }
+   .site-footer .social-icons a
+   {
+     width:40px;
+     height:40px;
+     line-height:40px;
+     margin-left:6px;
+     margin-right:0;
+     border-radius:100%;
+     background-color:#33353d
+   }
+   .copyright-text
+   {
+     margin:0
+   }
+   @media (max-width:991px)
+   {
+     .site-footer [class^=col-]
+     {
+       margin-bottom:30px
+     }
+   }
+   @media (max-width:767px)
+   {
+     .site-footer
+     {
+       padding-bottom:0
+     }
+     .site-footer .copyright-text,.site-footer .social-icons
+     {
+       text-align:center
+     }
+   }
+   .social-icons
+   {
+     padding-left:0;
+     margin-bottom:0;
+     list-style:none
+   }
+   .social-icons li
+   {
+     display:inline-block;
+     margin-bottom:4px
+   }
+   .social-icons li.title
+   {
+     margin-right:15px;
+     text-transform:uppercase;
+     color:#96a2b2;
+     font-weight:700;
+     font-size:13px
+   }
+   .social-icons a{
+     background-color:#eceeef;
+     color:#818a91;
+     font-size:16px;
+     display:inline-block;
+     line-height:44px;
+     width:44px;
+     height:44px;
+     text-align:center;
+     margin-right:8px;
+     border-radius:100%;
+     -webkit-transition:all .2s linear;
+     -o-transition:all .2s linear;
+     transition:all .2s linear
+   }
+   .social-icons a:active,.social-icons a:focus,.social-icons a:hover
+   {
+     color:#fff;
+     background-color:#29aafe
+   }
+   .social-icons.size-sm a
+   {
+     line-height:34px;
+     height:34px;
+     width:34px;
+     font-size:14px
+   }
+   .social-icons a.facebook:hover
+   {
+     background-color:#3b5998
+   }
+   .social-icons a.twitter:hover
+   {
+     background-color:#00aced
+   }
+   .social-icons a.linkedin:hover
+   {
+     background-color:#007bb6
+   }
+   .social-icons a.dribbble:hover
+   {
+     background-color:#ea4c89
+   }
+   @media (max-width:767px)
+   {
+     .social-icons li.title
+     {
+       display:block;
+       margin-right:0;
+       font-weight:600
+     }
+   }  
