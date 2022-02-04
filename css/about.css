@@ -74,7 +74,7 @@ body{
     /* The hero section with the famous quote */
     .heroSection{
       background-color: #E3A29A;
-      background-image: url("/img/Hero_Image.png");
+      background-image: url("img/Hero_Image.png");
       background-repeat: no-repeat;
       background-size: contain;
       background-position-x: center;
