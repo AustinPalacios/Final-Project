@@ -1,0 +1,418 @@
+/*--------------------------------Start of Website---------------------------------- */
+body{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    background: hsl(247, 18%, 20%);
+    /* borrowed inspirations from codepen https://codepen.io/primalivet/pen/ryjKmV */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    }
+    /* This will be my whole nav bar section with a sticky bar element */
+    .navBar{
+        background-color: #E3A29A;
+        height: 90px;
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        z-index: 2;
+        border-bottom:5px solid #2C2A3C;
+    }
+    /* This will be my attention grabber/logo will go */
+    .left-corner{
+      float: left;
+    }
+    .heroLogo{
+        float: left;
+        height: 80px;
+        width: 80px;
+        margin-top: 5px;
+        margin-left: 10px;
+    }
+    .navBar h1{
+        color: #2C2A3C;
+        font-size: 70px;
+        float: left;
+        margin-top: 5px;
+        font-family: 'Linden Hill', serif;
+    
+    }
+    /* This is where the navigation tabs are */
+    .navBar nav{
+        background-color: #E3A29A;
+        float:right;
+        margin-top: 10px;
+    
+    }
+    .navBar ul{
+        list-style-type: none;
+        margin: 0px;
+        padding: 0px;
+        height: 70px;
+        overflow: hidden;
+    }
+    .navBar li{
+        display: block;
+        float: right;
+        border-left: 2px solid #2C2A3C;
+    }
+    .navBar li:first-child{
+      margin-right: 0px;
+      padding-right: 0px;
+    }
+    .navBar li:last-child{
+        border-left: none;
+    }
+    .navBar li a{
+        display: block;
+        color: #2C2A3C;
+        font-size: 30px;
+        padding:  14px 16px;
+        font-family: 'Linden Hill', serif;
+        text-decoration: none;
+        text-transform:uppercase;
+    }
+    .navBar li a:hover{
+      background-color: #2C2A3C;
+      color: white;
+    }
+    /* The hero section with the famous quote */
+    .heroSection{
+      background-color: #E3A29A;
+      background-image: url("../img/Hero_Image.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position-x: center;
+      background-position-y: top;
+      border-bottom:5px solid #2C2A3C;
+      margin: 0px;
+      padding: 0px;
+      height: 800px;
+    }
+    
+    blockquote {
+        font-size: 35px;
+        color: #2C2A3C;  
+        font-family: 'Linden Hill', serif;
+        text-align:center;
+        margin-top: -9%;
+        padding-top: 32%;
+    }
+    * {
+        box-sizing: border-box;
+      }
+      .title{
+          color: #fff;
+        font-size:60px;
+        padding:20px 0px;
+      }
+      .container{
+        width:900px;
+        margin:0px auto;
+      }
+      /* Float three columns side by side */
+      .column {
+        float: left;
+        width: 33.33%;
+        padding: 0 10px;
+      }
+      
+      /* Remove extra left and right margins, due to padding */
+      .row {margin: 0 -5px;}
+      
+      /* Clear floats after the columns */
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+      
+      /* Responsive columns */
+      @media screen and (max-width: 700px) {
+        
+       .container{
+        width: 100%;
+      }
+        
+        .column {
+          width: 100%;
+          display: block;
+          margin-bottom: 20px;
+        }
+      }
+      
+      /* Style the counter cards */
+      .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        padding: 5px;
+        text-align: center;
+        background-color: #fff;
+        border-radius:10px;
+        cursor:pointer;
+      }
+      .card .profile{
+         border-radius:10px;
+         transition: 0.2s;
+      }
+      .card:hover .profile{
+        transform:scale(1.4);
+        border-top-right-radius:50px;
+        border-top-left-radius:50px;
+      }
+      
+      .card .content{
+        width:100%;
+        height:100%;
+        position:relative;
+        overflow:hidden;
+      }
+      .card .content .back{
+        position:absolute;
+        width:100%;
+        height:100%;
+        background-color: #f1f1f1e6;
+        transition:1s;
+        
+        z-index:1;
+        padding:10px;
+      }
+      
+      .from-left{
+        top:0;
+        left:-100%;
+      }
+      .card:hover .content .from-left {
+         left:0%;
+      }
+      
+      .from-bottom{
+        top:100%;
+        left:0;
+      }
+      .card:hover .content .from-bottom {
+         top:0%;
+      }
+      
+      .from-right{
+        top:0%;
+        right:-100%;
+      }
+      .card:hover .content .from-right {
+         right:0;
+      }
+      
+      .card .content .back h3{
+        font-size:15px;
+        letter-spacing:2px;
+      }
+      .card .content .back .tem-img{
+        border-radius:100%;
+      }
+      
+      .card .content .back .des{
+        font-size:16px;
+        padding:20px 0px;
+      }
+      .card .content .back .social-icon{
+        list-style:none;
+        margin:0px;
+        padding:0px;
+      }
+      .card .content .back .social-icon li{
+        display:inline-block;
+      }
+      
+      .card .content .back .social-icon li a{
+        display:block;
+        background:#333;
+        color:#fff;
+        width:40px;
+        height:40px;
+        text-align:center;
+        line-height:40px;
+        border-radius:100%;
+      }
+      
+      
+
+
+      button {
+        overflow: hidden;
+        margin-top: 20%;
+        text-transform: uppercase;
+        font-weight: 300;
+        background: #3B3636;
+        width: 10rem;
+        height: 2.25rem;
+        border: none;
+        border-radius: 2px;
+        outline: none;
+        cursor: pointer;
+      }
+      button a{
+          text-decoration: none;
+          color: #fff;
+      }
+
+    .site-footer
+    {
+      background-color:#26272b;
+      padding:45px 0 20px;
+      font-size:15px;
+      line-height:24px;
+      color:#737373;
+    }
+    .site-footer hr
+    {
+      border-top-color:#bbb;
+      opacity:0.5
+    }
+    .site-footer hr.small
+    {
+      margin:20px 0
+    }
+    .site-footer h6
+    {
+      color:#fff;
+      font-size:16px;
+      text-transform:uppercase;
+      margin-top:5px;
+      letter-spacing:2px
+    }
+    .site-footer a
+    {
+      color:#737373;
+    }
+    .site-footer a:hover
+    {
+      color:#3366cc;
+      text-decoration:none;
+    }
+    .footer-links
+    {
+      padding-left:0;
+      list-style:none
+    }
+    .footer-links li
+    {
+      display:block
+    }
+    .footer-links a
+    {
+      color:#737373
+    }
+    .footer-links a:active,.footer-links a:focus,.footer-links a:hover
+    {
+      color:#3366cc;
+      text-decoration:none;
+    }
+    .footer-links.inline li
+    {
+      display:inline-block
+    }
+    .site-footer .social-icons
+    {
+      text-align:right
+    }
+    .site-footer .social-icons a
+    {
+      width:40px;
+      height:40px;
+      line-height:40px;
+      margin-left:6px;
+      margin-right:0;
+      border-radius:100%;
+      background-color:#33353d
+    }
+    .copyright-text
+    {
+      margin:0
+    }
+    @media (max-width:991px)
+    {
+      .site-footer [class^=col-]
+      {
+        margin-bottom:30px
+      }
+    }
+    @media (max-width:767px)
+    {
+      .site-footer
+      {
+        padding-bottom:0
+      }
+      .site-footer .copyright-text,.site-footer .social-icons
+      {
+        text-align:center
+      }
+    }
+    .social-icons
+    {
+      padding-left:0;
+      margin-bottom:0;
+      list-style:none
+    }
+    .social-icons li
+    {
+      display:inline-block;
+      margin-bottom:4px
+    }
+    .social-icons li.title
+    {
+      margin-right:15px;
+      text-transform:uppercase;
+      color:#96a2b2;
+      font-weight:700;
+      font-size:13px
+    }
+    .social-icons a{
+      background-color:#eceeef;
+      color:#818a91;
+      font-size:16px;
+      display:inline-block;
+      line-height:44px;
+      width:44px;
+      height:44px;
+      text-align:center;
+      margin-right:8px;
+      border-radius:100%;
+      -webkit-transition:all .2s linear;
+      -o-transition:all .2s linear;
+      transition:all .2s linear
+    }
+    .social-icons a:active,.social-icons a:focus,.social-icons a:hover
+    {
+      color:#fff;
+      background-color:#29aafe
+    }
+    .social-icons.size-sm a
+    {
+      line-height:34px;
+      height:34px;
+      width:34px;
+      font-size:14px
+    }
+    .social-icons a.facebook:hover
+    {
+      background-color:#3b5998
+    }
+    .social-icons a.twitter:hover
+    {
+      background-color:#00aced
+    }
+    .social-icons a.linkedin:hover
+    {
+      background-color:#007bb6
+    }
+    .social-icons a.dribbble:hover
+    {
+      background-color:#ea4c89
+    }
+    @media (max-width:767px)
+    {
+      .social-icons li.title
+      {
+        display:block;
+        margin-right:0;
+        font-weight:600
+      }
+    }  

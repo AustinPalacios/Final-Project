@@ -129,9 +129,9 @@ blockquote {
         grid-template-areas:
           "hero   hero   hero   med1   med1"
           "hero   hero   hero   med2   med2"
-          "big1   big1   big1   big1   big1"
+          /* "big1   big1   big1   big1   big1"
           "small1 small2 small3 small4 small5"
-          "small6 small7 small8 small9 small10";
+          "small6 small7 small8 small9 small10"*/; 
       }
     }
   
@@ -143,7 +143,7 @@ blockquote {
         "small1 hero   hero hero med1   med1"
         "small2 hero   hero hero med2   med2"
         /* "small3 small5 big1 big1 small7 small8"
-        "small4 small6 big1 big1 small9 small10"; */
+        "small4 small6 big1 big1 small9 small10"*/; 
       }
     }
   
@@ -234,7 +234,7 @@ blockquote {
     justify-content: center;
     align-items: center;
     position: relative;
-    z-index: 2;
+    z-index: 0;
     width: 50px;
     height: 50px;
     border-radius: 5px;
@@ -259,7 +259,7 @@ blockquote {
   }
   .tooltip {
     position: absolute;
-    z-index: 1;
+    z-index: 0;
     padding: 0.25rem 1rem;
     border-radius: 5px;
     background: #29343d;
