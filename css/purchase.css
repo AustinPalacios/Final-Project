@@ -135,7 +135,6 @@ body{
        background-color:#1cb1fe;
        color:#fff;
        padding:10px 40px;
-       @include box-shadow(0px 2px 0px #1cb1fe - 50);
        border-top:1px solid #1cb1fe + 50;
       }
 .container h4 {
