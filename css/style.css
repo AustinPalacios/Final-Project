@@ -97,6 +97,11 @@ blockquote {
     margin-top: -9%;
     padding-top: 32%;
 }
+.info{
+  color: #fff;
+  font-size: 60px;
+  font-family: 'Linden Hill', serif;
+}
 /* Everything now was a large inspiration from https://codepen.io/primalivet/pen/ryjKmV */
 @supports (display: grid) {
 
@@ -371,6 +376,7 @@ blockquote {
    .footer-links li
    {
      display:block
+     
    }
    .footer-links a
    {

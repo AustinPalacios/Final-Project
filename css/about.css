@@ -93,7 +93,7 @@ body{
         font-family: 'Linden Hill', serif;
         text-align:center;
         margin-top: -9%;
-        padding-top: 32%;
+        padding-top: 30%;
     }
 
     
@@ -118,12 +118,15 @@ body{
         font-size: 35px;
         color: #fff;  
         font-family: 'Linden Hill', serif;
-    
+        margin: 1%;
+
     }
     .author-1 cite{
         font-size: 35px;
         color: #fff;  
         font-family: 'Linden Hill', serif;
+        margin: 1%;
+
     }
 
     
@@ -147,12 +150,14 @@ body{
         font-size: 35px;
         color: #fff;  
         font-family: 'Linden Hill', serif;
-    
+        margin: 1%;
     }
     .author-2 cite{
         font-size: 35px;
         color: #fff;  
         font-family: 'Linden Hill', serif;
+        margin: 1%;
+
     }
 
     .author-3{
@@ -175,12 +180,15 @@ body{
         font-size: 35px;
         color: #fff;  
         font-family: 'Linden Hill', serif;
-    
+        margin: 1%;
+
     }
     .author-3 cite{
         font-size: 35px;
         color: #fff;  
         font-family: 'Linden Hill', serif;
+        margin: 1%;
+
     }
 
     .author-4{
@@ -203,12 +211,15 @@ body{
         font-size: 35px;
         color: #fff;  
         font-family: 'Linden Hill', serif;
-    
+        margin: 1%;
+
     }
     .author-4 cite{
         font-size: 35px;
         color: #fff;  
         font-family: 'Linden Hill', serif;
+        margin: 1%;
+
     }
 
     .author-5{
@@ -231,12 +242,15 @@ body{
         font-size: 35px;
         color: #fff;  
         font-family: 'Linden Hill', serif;
-    
+        margin: 1%;
+
     }
     .author-5 cite{
         font-size: 35px;
         color: #fff;  
         font-family: 'Linden Hill', serif;
+        margin: 1%;
+
     }
 
 
